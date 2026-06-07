@@ -22,9 +22,8 @@ body {
 
 /* 2. The Main Wrapper Container */
 #arcade-container {
-    width: min(1000px, calc(100vw - 24px), calc((100vh - 24px) * 1.25));
-    height: min(calc((100vw - 24px) * 0.8), calc(100vh - 24px));
-    max-width: 1000px;
+    width: min(1000px, calc(100vw - 24px));
+    aspect-ratio: 5 / 4;
     max-height: calc(100vh - 24px);
     display: flex;
     justify-content: center;
@@ -37,9 +36,9 @@ body {
     width: 100%;
     height: 100%;
     background-image: url("./brick-wall.png");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center top;
     position: relative;
 }
 
@@ -228,8 +227,7 @@ body {
     }
 
     #arcade-container {
-        width: min(calc(100vw - 20px), calc((100vh - 20px) * 1.25));
-        max-width: 780px;
+        width: min(calc(100vw - 20px), 780px);
         max-height: calc(100vh - 20px);
     }
 
@@ -259,8 +257,7 @@ body {
     }
 
     #arcade-container {
-        width: min(calc(100vw - 16px), calc((100vh - 16px) * 1.25));
-        max-width: 740px;
+        width: min(calc(100vw - 16px), 740px);
         max-height: calc(100vh - 16px);
     }
 
@@ -299,8 +296,7 @@ body {
 
 @media (max-width: 500px) {
     #arcade-container {
-        width: min(calc(100vw - 12px), calc((100vh - 12px) * 1.25));
-        max-width: 520px;
+        width: min(calc(100vw - 12px), 520px);
         max-height: calc(100vh - 12px);
     }
 
