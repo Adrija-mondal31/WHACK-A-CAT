@@ -169,9 +169,12 @@ startButton.addEventListener('click', () => {
 // 8. Bind click event handlers directly to your cats and rats
 cats.forEach((cat) => {
     cat.addEventListener('click', handleWhack);
+    cat.addEventListener('pointerdown', handleWhack);
 });
 rats.forEach((rat) => {
     rat.addEventListener('click', handleWhack);
+    rat.addEventListener('pointerdown', handleWhack);
 });
 
 gameGrid.addEventListener('click', handleGridClick);
+gameGrid.addEventListener('pointerdown', handleGridClick);

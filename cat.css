@@ -162,7 +162,8 @@ body {
 .character,
 .rat {
     position: absolute;
-    width: 150%;           /* Scales the character down so it fits nicely inside a box */
+    width: 170%;
+    max-width: 220px;
     height: auto;
     bottom: -50px;         /* Raise the character even more inside the box */
     z-index: 1;           /* Keep the character beneath the box opening */
@@ -171,6 +172,8 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: transform 0.2s ease-out, opacity 0.2s ease-out; /* Makes the pop-up look fluid and fast */
+    touch-action: manipulation;
+    cursor: pointer;
 }
 
 .character.active-cat,
@@ -178,6 +181,7 @@ body {
     transform: translateY(-60px); /* Slide the target higher upward out of the box */
     opacity: 1;
     pointer-events: auto;
+    cursor: pointer;
 }
 
 #timer-display {
